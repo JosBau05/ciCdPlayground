@@ -54,11 +54,11 @@ pipeline {
                     userMetadata: []
             }
         }
+    }
 
-        post {
-            always {
-                junit testResults: '**/reports/**/*.xml', allowEmptyResults: true
-            }
+    post {
+        always {
+            junit testResults: '**/reports/**/*.xml', allowEmptyResults: true
         }
     }
 }
